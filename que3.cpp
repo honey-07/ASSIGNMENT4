@@ -1,43 +1,34 @@
-//Write a C++ program to find the sum of individual digits of a positive integer arrays.
+//Write a program to create a class template for the ‘Array’ class.
 
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-class sorting
+template<class T>
+class Array
 {
 public:
-
-	void sort(int a[],int s)
-	{
-		
+	T array(T a[],int s){
 		for (int i = 0; i < s; i++)
 		{
-			int rem,sum=0;
-			while(a[i] > 0)
-			{
-				
-				rem=a[i]%10;
-				sum += rem;
-				a[i]/=10;
-			}
-			cout << " " << sum;
-			
+			cout << a[i] << " ";
 		}
 	}
+}; 
 
-};
-int main()
-{
-	sorting arr;
-	int a[100],s;
-	cout << "Enter size : ";
-	cin >> s;
-	cout << "Enter values : "<< endl;
-	for (int i = 0; i < s; i++)
-	{
-		cin >> a[i];	
-	}
+ int main()
+ {
+ 	Array <float>ob;
+ 	float a[30];
+ 	int s;
+ 	cout<<"Enter size of an array : ";
+ 	cin >>s;
 
-arr.sort(a,s);
-return 0;
-}
+ 	cout<<"Enter elements of an array : ";
+ 	for (int i = 0; i < s; i++)
+ 	{
+ 		cin >>a[i];
+ 	}
+
+ 		ob.array(a,s);
+ return 0;
+ }
