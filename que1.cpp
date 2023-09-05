@@ -1,15 +1,29 @@
-// Write a C++ program to enter a string and find its length.
+// Write a C++ Program to create a function template for finding a maximum value contained in array.
+
 #include<iostream>
-#include<string>
 using namespace std;
-int main()
+template<class T>
+
+T array(T a[])
 {
-	string name;
+	T max=a[0];
+	for (int i = 1; i < 5; i++)
+	{
+		if(max < a[i])
+			max=a[i];
+	}
 
-	cout<<"Enter your name : ";
-	getline(cin,name);
+	cout << "MAXIMUM VALUE FROM ARRAY IS : "<< max << endl;
+}
 
-	cout << "The length of your name "<<name <<" is "<< name.length() << endl;
+int main (){
+	char a[50];
 
-return 0;
+	cout<< "Enter elements of an array : ";
+	for (int i = 0; i < 5; i++)
+	{
+		cin >> a[i];
+	}
+	array(a);
+	return 0;	
 }
