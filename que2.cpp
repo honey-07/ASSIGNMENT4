@@ -1,46 +1,25 @@
-//Write a C++ program to sort a list of numbers in ascending order.
-#include <iostream>
+// Write a C++ Program to to add two numbers with use of template function.
+#include<iostream>
 using namespace std;
 
-class sorting
-{
-public:
+template<class T1,class T2>
+ 
+ void add(T1 n1,T2 n2){
 
-	void sort(int a[],int s)
-	{
-		
-		for (int i = 0; i < s; i++)
-		{
-			for (int j = 0; j < s - i - 1; j++) 
-            {
-                if (a[j] > a[j + 1])
-                {
-                   
-                    int temp = a[j];
-                    a[j] = a[j + 1];
-                    a[j + 1] = temp;
-                }
-            }
-		}
-		for (int i = 0; i < s; ++i)
-		{
-			cout << " " << a[i];
-		}	
-	}
+ 	cout << "Addition is : "<< n1+n2 << endl;
+ } 
 
-};
-int main()
-{
-	sorting arr;
-	int a[100],s;
-	cout << "Enter size : ";
-	cin >> s;
-	cout << "Enter values : "<< endl;
-	for (int i = 0; i < s; i++)
-	{
-		cin >> a[i];	
-	}
+ int main()
+ {
+ 	int n1;
+ 	float n2;
 
-arr.sort(a,s);
-return 0;
-}
+ 	cout << "Enter integer number : ";
+ 	cin >> n1;
+
+ 	cout << "Enter float number : ";
+ 	cin >> n2;
+
+ 		add(n1,n2);
+ return 0;
+ }
